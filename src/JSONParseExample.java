@@ -2,13 +2,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Example on how to parse JSON strings to objects or arrays, and vice versa
+ */
 public class JSONParseExample {
 
     public static void main(String[] args) {
 
         // Note: to do the JSON parsing you need org.json library
-        // This project imports it automatically: the dependency to the library
-        // Is described in the pom.xml file.
+        // This project imports it automatically: the dependency to the library 
+        // Is described in the pom.xml file. 
         objectExample();
         arrayExample();
         nestedJsonExample();
@@ -49,7 +52,7 @@ public class JSONParseExample {
 
         } catch (JSONException e) {
             // It is important to always wrap JSON parsing in try/catch
-            // If the string is suddently not in the expected format,
+            // If the string is suddently not in the expected format, 
             // an exception will be generated
             System.out.println("Got exception in JSON parsing: " + e.getMessage());
         }
@@ -105,8 +108,8 @@ public class JSONParseExample {
         System.out.println("Test JSON Array with objects inside");
         System.out.println("--------------------------------------------------");
 
-        // JSON supports hierarchy. Objects can be placed inside arrays, arrays
-        // inside objects, etc.
+        // JSON supports hierarchy. Objects can be placed inside arrays, arrays 
+        // inside objects, etc. 
         // Let's create a registry of books. It will contain an array of books
         // We parse each item as an object
         String book1 = "{ \"title\": \"Computer networks\", \"pages\": 700 }";
